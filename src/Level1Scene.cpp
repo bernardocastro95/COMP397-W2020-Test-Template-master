@@ -15,6 +15,7 @@ void Level1Scene::draw()
 {
 	m_pLeftDice->draw();
 	m_pRightDice->draw();
+	m_pRollButton->draw();
 }
 
 void Level1Scene::update()
@@ -129,6 +130,9 @@ void Level1Scene::start()
 	m_pRightDice = new RightDice();
 	m_pRightDice->setPosition(glm::vec2(Config::SCREEN_WIDTH * 0.7f, Config::SCREEN_HEIGHT * 0.3f));
 	addChild(m_pRightDice);
+
+	m_pRollButton = new RollButton();
+	m_pRollButton->setPosition(glm::vec2(Config::SCREEN_WIDTH * 0.5f, Config::SCREEN_HEIGHT * 0.7f));
 }
 
 glm::vec2 Level1Scene::getMousePosition()

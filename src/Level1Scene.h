@@ -5,6 +5,7 @@
 #include "Scene.h"
 #include "../Template/LeftDice.h"
 #include "../Template/RightDice.h"
+#include "../Template/RollButton.h"
 
 class Level1Scene : public Scene
 {
@@ -25,6 +26,7 @@ private:
 	// game objects
 	LeftDice* m_pLeftDice;
 	RightDice* m_pRightDice;
+	RollButton* m_pRollButton;
 
 
 	// private data member
