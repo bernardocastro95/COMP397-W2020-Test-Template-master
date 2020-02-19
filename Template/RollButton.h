@@ -10,7 +10,16 @@ public:
 	virtual ~RollButton();
 
 	bool ButtonClick() override;
+
+	int getLeftDiceNumber();
+    int getRightDiceNumber();
+
+	void setLeftDiceNumber(int numDiceLeft);
+	void setRightDiceNumber(int numDiceRight);
 private:
 	bool m_clicked;
+
+	int numDiceLeft;
+	int numDiceRight;
 };
 #endif

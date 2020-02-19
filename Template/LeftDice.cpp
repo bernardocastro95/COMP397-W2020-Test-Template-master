@@ -34,3 +34,8 @@ void LeftDice::update()
 void LeftDice::clean()
 {
 }
+/*void RightDice::setDice(int random)
+{
+	TheTextureManager::Instance()->load("../Assets/textures/" + std::to_string(random) + ".png",
+		"leftDice", TheGame::Instance()->getRenderer());
+}*/

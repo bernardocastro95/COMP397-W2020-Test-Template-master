@@ -11,5 +11,6 @@ public:
 	void draw() override;
 	void update() override;
 	void clean() override;
+	//void setDice(int random);
 };
 #endif

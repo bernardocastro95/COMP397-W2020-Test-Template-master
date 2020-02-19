@@ -15,6 +15,7 @@ public:
 	~Level1Scene();
 	
 	void draw() override;
+	void updateLabel();
 	void update() override;
 	void clean() override;
 	void handleEvents() override;

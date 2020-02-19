@@ -20,9 +20,17 @@ void Level1Scene::draw()
 	m_pRightDiceLabel->draw();
 }
 
+void Level1Scene::updateLabel()
+{
+	//m_pLeftDiceLabel->setText(std::to_string(m_pRollButton->getLeftDiceNumber()));
+	m_pRightDiceLabel->setText(std::to_string(m_pRollButton->getRightDiceNumber()));
+	
+}
+
 void Level1Scene::update()
 {
-
+	m_pRollButton->setMousePosition(m_mousePosition);
+	m_pRollButton->ButtonClick();
 
 }
 
@@ -51,7 +59,7 @@ void Level1Scene::handleEvents()
 			switch(event.button.button)
 			{
 			case SDL_BUTTON_LEFT:
-				
+				m_pRollButton->setMouseButtonClicked(true);
 				break;
 			}
 		
@@ -60,7 +68,8 @@ void Level1Scene::handleEvents()
 			switch (event.button.button)
 			{
 			case SDL_BUTTON_LEFT:
-				
+				m_pRollButton->setMouseButtonClicked(false);
+				updateLabel();
 				break;
 			}
 			break;

@@ -21,7 +21,10 @@ bool RollButton::ButtonClick()
 	{
 		if (!m_clicked)
 		{
-			
+			//int num = Util::RandomRange(1, 6);
+			//setLeftDiceNumber(num);
+			int num2 = Util::RandomRange(1, 6);
+			setRightDiceNumber(num2);
 			m_clicked = true;
 		}
 		return true;
@@ -33,3 +36,23 @@ bool RollButton::ButtonClick()
 
 	return false;
 }
+int RollButton::getLeftDiceNumber()
+{
+	return numDiceLeft;
+}
+int RollButton::getRightDiceNumber()
+{
+	return numDiceRight;
+}
+void RollButton::setLeftDiceNumber(int numDiceLeft)
+{
+	this->numDiceLeft = numDiceLeft;
+}
+void RollButton::setRightDiceNumber(int numDiceRight)
+{
+	this->numDiceRight = numDiceRight;
+}
+
+
+
+

@@ -33,6 +33,11 @@ void RightDice::clean()
 {
 	
 }
+void RightDice::setDice(int random)
+{
+	TheTextureManager::Instance()->load("../Assets/textures/" + std::to_string(random) + ".png",
+		"rightDice", TheGame::Instance()->getRenderer());
+}
 
 
 
