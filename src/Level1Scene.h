@@ -4,6 +4,7 @@
 
 #include "Scene.h"
 #include "../Template/LeftDice.h"
+#include "../Template/RightDice.h"
 
 class Level1Scene : public Scene
 {
@@ -23,6 +24,7 @@ public:
 private:
 	// game objects
 	LeftDice* m_pLeftDice;
+	RightDice* m_pRightDice;
 
 
 	// private data member

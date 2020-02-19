@@ -14,6 +14,7 @@ Level1Scene::~Level1Scene()
 void Level1Scene::draw()
 {
 	m_pLeftDice->draw();
+	m_pRightDice->draw();
 }
 
 void Level1Scene::update()
@@ -124,6 +125,10 @@ void Level1Scene::start()
 	m_pLeftDice = new LeftDice();
 	m_pLeftDice->setPosition(glm::vec2(Config::SCREEN_WIDTH * 0.3f, Config::SCREEN_HEIGHT * 0.3f));
 	addChild(m_pLeftDice);
+
+	m_pRightDice = new RightDice();
+	m_pRightDice->setPosition(glm::vec2(Config::SCREEN_WIDTH * 0.7f, Config::SCREEN_HEIGHT * 0.3f));
+	addChild(m_pRightDice);
 }
 
 glm::vec2 Level1Scene::getMousePosition()

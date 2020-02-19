@@ -1,6 +1,6 @@
 #include "LeftDice.h"
 #include "../src/Game.h"
-//Bernardo Castro 02/18/2020 Defining the Left Dice
+//Bernardo Castro 02/18/2020 Creating the Left Dice
 LeftDice::LeftDice()
 {
 	TheTextureManager::Instance()->load("../Assets/textures/4.png",
