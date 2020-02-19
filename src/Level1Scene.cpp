@@ -16,6 +16,8 @@ void Level1Scene::draw()
 	m_pLeftDice->draw();
 	m_pRightDice->draw();
 	m_pRollButton->draw();
+	m_pLeftDiceLabel->draw();
+	m_pRightDiceLabel->draw();
 }
 
 void Level1Scene::update()
@@ -133,6 +135,13 @@ void Level1Scene::start()
 
 	m_pRollButton = new RollButton();
 	m_pRollButton->setPosition(glm::vec2(Config::SCREEN_WIDTH * 0.5f, Config::SCREEN_HEIGHT * 0.7f));
+
+	SDL_Color black = { 0, 0, 0, 255 };
+	m_pLeftDiceLabel = new Label("4", "Consolas", 40, black, 
+		glm::vec2(Config::SCREEN_WIDTH * 0.3f, Config::SCREEN_HEIGHT * 0.6f));
+	addChild(m_pLeftDiceLabel);
+	m_pRightDiceLabel = new Label("2", "Consolas", 40, black,
+		glm::vec2(Config::SCREEN_WIDTH * 0.7f, Config::SCREEN_HEIGHT * 0.6f));
 }
 
 glm::vec2 Level1Scene::getMousePosition()
